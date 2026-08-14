@@ -10,12 +10,12 @@ set -euo pipefail
 # ⚠ ESTADO REAL (2026-08): yola-cli es un CLI TypeScript/Bun — todavía NO
 # existe un binario standalone publicado. El binario oficial se publicará en
 # la release 24.09.2026 (GitHub Releases). Patrón de URL:
-#   https://github.com/ROSALDEV-SAC/yola-cli/releases/latest/download/yola-cli-<os>-<arch>
+#   https://github.com/NO-OPEN-YOLA/yola-cli/releases/latest/download/yola-cli-<os>-<arch>
 # Este script es honesto: solo descarga si el binario ya está publicado.
 # ═══════════════════════════════════════════════════════════════════════
 
 VERSION="0.1.4"
-RELEASE_URL="https://github.com/ROSALDEV-SAC/yola-cli/releases/latest/download"
+RELEASE_URL="https://github.com/NO-OPEN-YOLA/yola-cli/releases/latest/download"
 
 # ── Colores ──────────────────────────────────────────────────────────
 BOLD='\033[1m'
