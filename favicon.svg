@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- YOLA — el gato oficial (port EXACTO del YolaAvatar del OS — el widget) -->
+  <defs>
+    <radialGradient id="ag" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6C5CE7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#6C5CE7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ae" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6C5CE7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#6C5CE7" stop-opacity="0.15"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="128" cy="128" r="110" fill="url(#ag)"/>
+
+  <!-- Cabeza -->
+  <path d="M0 -75 C35 -75 65 -55 78 -30 C88 -10 88 15 78 35 C68 55 45 68 20 72 C10 74 0 75 0 75 C0 75 -10 74 -20 72 C-45 68 -68 55 -78 35 C-88 15 -88 -10 -78 -30 C-65 -55 -35 -75 0 -75Z"
+    fill="#ffffff" fill-opacity="0.95" transform="translate(128, 128)"/>
+
+  <!-- Orejas -->
+  <g transform="translate(128, 128)">
+    <path d="M-55 -55 C-65 -75 -45 -90 -38 -68 C-34 -58 -45 -52 -55 -55Z" fill="#ffffff" fill-opacity="0.85"/>
+    <path d="M-48 -58 C-54 -70 -44 -78 -40 -66 C-38 -60 -44 -56 -48 -58Z" fill="#6C5CE7" opacity="0.12"/>
+    <path d="M55 -55 C65 -75 45 -90 38 -68 C34 -58 45 -52 55 -55Z" fill="#ffffff" fill-opacity="0.85"/>
+    <path d="M48 -58 C54 -70 44 -78 40 -66 C38 -60 44 -56 48 -58Z" fill="#6C5CE7" opacity="0.12"/>
+  </g>
+
+  <!-- Ojos dorados -->
+  <g transform="translate(128, 128)">
+    <circle cx="-28" cy="-12" r="26" fill="#d4a030"/>
+    <circle cx="-28" cy="-12" r="19" fill="url(#ae)"/>
+    <circle cx="-28" cy="-12" r="26" fill="none" stroke="#131010" stroke-width="3"/>
+    <circle cx="-28" cy="-12" r="7" fill="#131010"/>
+    <circle cx="-23" cy="-17" r="5" fill="white" fill-opacity="0.85"/>
+  </g>
+  <g transform="translate(128, 128)">
+    <circle cx="28" cy="-12" r="26" fill="#d4a030"/>
+    <circle cx="28" cy="-12" r="19" fill="url(#ae)"/>
+    <circle cx="28" cy="-12" r="26" fill="none" stroke="#131010" stroke-width="3"/>
+    <circle cx="28" cy="-12" r="7" fill="#131010"/>
+    <circle cx="33" cy="-17" r="5" fill="white" fill-opacity="0.85"/>
+  </g>
+
+  <!-- Nariz -->
+  <path d="M-7 13 L0 20 L7 13 Z" fill="#131010" transform="translate(128, 128)"/>
+
+  <!-- Boca -->
+  <g transform="translate(128, 128)" fill="none" stroke="#131010" stroke-width="1.8" stroke-linecap="round">
+    <path d="M0 20 L0 26"/>
+    <path d="M0 26 Q-7 33 -14 29"/>
+    <path d="M0 26 Q7 33 14 29"/>
+  </g>
+
+  <!-- Bigotes -->
+  <g transform="translate(128, 128)" fill="none" stroke="#131010" stroke-width="1.8" stroke-linecap="round">
+    <path d="M-20 24 Q-34 20 -48 13"/>
+    <path d="M-20 28 Q-35 33 -50 28"/>
+    <path d="M-20 32 Q-34 38 -48 39"/>
+    <path d="M20 24 Q34 20 48 13"/>
+    <path d="M20 28 Q35 33 50 28"/>
+    <path d="M20 32 Q34 38 48 39"/>
+  </g>
+</svg>

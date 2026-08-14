@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "updated": "2026-08-14",
+  "apps": [
+    {
+      "id": "yola-code",
+      "name": "YOLA Code",
+      "author": "YOLA",
+      "repo": "github.com/NO-OPEN-YOLA/yola-code",
+      "icon": "ðŸ§‘â€ðŸ’»",
+      "category": "Dev",
+      "description": "El editor nativo de YOLA â€” producto independiente: su cÃ³digo vive en su propio repo, aquÃ­ solo se referencia. v0.7.0: ðŸ’¬ conversar con YOLA Â· âœ¨ mejorar selecciÃ³n (chip adjunta visible) â€” botones diferenciados.",
+      "version": "0.8.0",
+      "manifestUrl": "https://raw.githubusercontent.com/NO-OPEN-YOLA/yola-code/master/manifest.json",
+      "permissions": ["notify", "openApp", "files"]
+    }
+  ]
+}
