@@ -1,0 +1,16 @@
+import{_ as e,a as t,c as n,d as r,f as i,l as a,n as o,r as s,t as c,u as l}from"./supabase.DANIhefC.js";var u=e=>document.getElementById(e);function d(e){if(!e)return{dot:`○`,color:`#64748b`,label:`sin datos`};let t=(Date.now()-new Date(e).getTime())/6e4;return t<3?{dot:`●`,color:`#34d399`,label:`vivo ahora`}:t<1440?{dot:`◐`,color:`#fbbf24`,label:`hace ${Math.round(t/60)}h`}:{dot:`○`,color:`#64748b`,label:`hace ${Math.round(t/1440)}d`}}function f(e){let t=String(e||``).toLowerCase();return t.includes(`android`)||t.includes(`ios`)?`📱`:t.includes(`linux`)||t.includes(`kiosk`)?`🖥️`:(t.includes(`mac`),`💻`)}var p=10,m={plan:i(null),storageBytes:0,bodies:[],userEmail:``};function h(){u(`planEmoji`).textContent=m.plan.emoji,u(`planName`).textContent=m.plan.name,u(`planSub`).textContent=m.plan.tagline;let e=m.plan.certified;u(`certZone`).classList.toggle(`hidden`,!e),u(`certBadge`).classList.toggle(`hidden`,!e),e&&(u(`certExpiry`).textContent=`Vence: `+s(m.plan.expiresAt)),u(`storageLabel`).textContent=`${o(m.storageBytes)} / ${p} GB`;let t=Math.min(100,m.storageBytes/(p*1024**3)*100);u(`storageBar`).style.width=t+`%`,u(`upgradeZone`).classList.toggle(`hidden`,e),m.userEmail&&(u(`identityLine`).textContent=`Tu cuenta: ${c(m.userEmail)} · ${m.bodies.length} cuerpo(s)`,u(`identityName`).textContent=m.userEmail,u(`identityMeta`).textContent=`${m.bodies.length} cuerpo(s) en tu universo`)}function g(){u(`loading`).classList.add(`hidden`),u(`noSession`).classList.remove(`hidden`)}async function _(e){m.userEmail=e.email||``;let{data:r}=await a(e.id);m.plan=i(r);let{data:o}=await n(e.id);m.storageBytes=o?.used_bytes||0;let{data:s}=await t(e.id);m.bodies=s||[],u(`loading`).classList.add(`hidden`),u(`panelContent`).classList.remove(`hidden`),h(),v()}function v(){let e=u(`bodiesList`),t=u(`bodiesEmpty`);if(!m.bodies.length){e.innerHTML=``,t.classList.remove(`hidden`);return}t.classList.add(`hidden`),e.innerHTML=m.bodies.map(e=>{let t=d(e.last_seen);return`
+          <div class="flex items-center justify-between gap-3 rounded-xl border border-line/60 px-4 py-3 hover:border-violet-yola/40 transition-colors">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-9 h-9 shrink-0 rounded-lg bg-violet-yola/15 border border-violet-yola/30 flex items-center justify-center text-base">${f(e.platform)}</div>
+              <div class="min-w-0">
+                <div class="text-sm font-medium text-text-main truncate">${c(e.name)}</div>
+                <div class="text-xs text-text-dim font-mono truncate">${c(e.platform||`desconocido`)}</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 shrink-0">
+              <span class="text-xs px-2.5 py-1 rounded-full border" style="color:${t.color}; border-color:${t.color}33; background:${t.color}11">
+                ${t.dot} ${t.label}
+              </span>
+            </div>
+          </div>
+        `}).join(``)}l(),r(e=>{if(!e?.user){g();return}_(e.user)}),u(`btnLogout`).addEventListener(`click`,async()=>{await e(),window.location.href=`/`}),u(`paidZone`),document.querySelectorAll(`a[href="#upgrade"]`).forEach(e=>{e.addEventListener(`click`,e=>{e.preventDefault(),alert(`Link de pago aún no configurado. Escríbenos a hola@yola.dev para pagar y certificar.`)})});
